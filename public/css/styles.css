@@ -1,0 +1,546 @@
+/* CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, 
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 DISPLAY-ROLE RESET FOR OLDER BROWSERS */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+  /* BASE STYLES-ALL PAGES */
+
+
+	html.front-end {
+		background-image: url("../img/hex2.jpg");
+		background-size: cover;
+
+	}
+
+	#logo {
+		width: 15%;
+		padding: 2em 0 0 2em;
+		margin: 0 5em 0 0;
+	}
+	#logo2 {
+		width: 6em;
+		height: 3em;
+		padding: 3.5em 0 0 .5em;
+		margin-right: 3em;
+		}
+
+	.accessMessage{
+		text-align: center;
+	}
+	.accessMessage h1 {
+		font-weight: 700;
+		font-size: 3em;
+		color: red;
+	}
+	.accessMessage p {
+		font-size: 2em;
+	}
+
+  /* BASE HEADER STYLES */
+
+	.wrapper{
+		display: flex;
+	}
+
+	#thenav {
+		display: flex;
+		background-color:#75c9bb;
+		height: 6em;
+		width: 75%;
+		margin: 2em 2em 0 -2em;
+		padding: 0 4em 0 2em;
+		grid-template-areas: "insert search update";
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		border-radius: .25em;
+	}
+
+	#navmenu {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		padding: .75em;
+		gap: .5em;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	#thenavfront {
+		display: flex;
+		background-color:#75c9bb;
+		height: 1.5em;
+		width: 75%;
+		font-size: 1.25em;
+		margin: 3em 2em 0 -2em;
+		padding-bottom: .75em;
+		grid-template-areas: "insert search update";
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		border-radius: .25em;
+
+	}
+	#patlogout{
+		color: red;
+	}
+	#thenavfront2 {
+		display: flex;
+		background-color:#75c9bb;
+		height: 1.5em;
+		width: 75%;
+		font-size: 1.25em;
+		margin: 3em 2em 0 -2em;
+		padding-bottom: .75em;
+		grid-template-areas: "insert search update";
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		border-radius: .25em;
+
+	}
+	a:hover {
+		font-weight: 550;	
+		margin-right: .05em;	
+		transition: .5s;
+	}
+	#navmenufront {
+		display: flex;
+		
+	}
+	.frontend  {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		padding: .5em;
+	}
+	.frontend a {
+		color: #140244;
+		font-weight: bold;
+	}
+/* FRONT-END STYLES INDEX PAGE */
+
+	#covidBox {
+		text-align: center;
+		background-color:rgba(20, 2, 68, 0.7);
+		color: white;
+		width: 80%;
+		height: 10em;
+		margin:0 0 5em 9.5%;
+		padding-bottom: .5em;
+	}
+	#covidBox p:first-of-type {
+		font-size: 3em;
+		margin: .5em 0 .125em 0;
+		padding: .25em 0 0 .25em;
+	}
+	#covidBox p:last-of-type {
+		font-size: 1.5em;
+	}
+	#covidLink {
+		display: flex;
+		background-color: #fff;
+		color: rgba(20, 2, 68, 0.7);
+		margin: 1.5em 0 5em 40%;
+		width: 20%;
+		height: 2.5em;
+		justify-content: center;
+		align-items: center;
+		border-radius: 1em;
+	}
+
+  /* INDEX PAGE STYLES */
+
+  #detailsout th {
+	  background-color: #140244;
+	  color: #75c9bb;
+	  white-space: pre-wrap;
+  }
+
+	#docimg1 {
+		width: 80%;
+		margin: 3em 0 0 7.5em;
+	}
+
+  /* LOGIN FORM EMPLOYEE */
+  #employeelogincontainer {
+	border-radius: .25em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 25em;
+	margin: 2em 5em 0 29.4em;
+	background-color: #75c9bb;
+  }
+  #loginheader {
+	  margin: .5em 0 .5em 0;
+  }
+  #theform {
+	border-radius: .25em;
+	margin: 2em 0 2em 0;
+	padding: .25em;
+	text-align: center;
+	background-color: #140244 ;
+	color: #fff;
+  }
+  #theform input {
+	padding: .5em;
+	margin: .25em;
+  }
+  #clrbtnemp {
+	display: flex;
+	flex-direction: row;	
+	justify-content: space-around;
+	align-items:center;
+	padding: .25em 1em .25em .25em;
+	margin: -1em 0 1em 0;
+  }
+  #addemplogin {
+	  margin-right: 5em;
+  }
+  /* LOGIN FORM PATIENTS */
+	#patientlogincontainer {
+		border-radius: .25em;
+		display: flex;
+		float: right;
+		flex-direction: column;
+		align-items: center;
+		width: 25em;
+		margin: 2em 5em 0 25em;
+		background-color: #75c9bb;
+	}
+	#loginheader {
+		margin: .5em 0 .5em 0;
+	}
+	#theform {
+	border-radius: .25em;
+	margin: 2em 0 2em 0;
+	padding: .25em;
+	text-align: center;
+	background-color: #140244 ;
+	color: #fff;
+	} 
+	#theform input {
+	padding: .5em;
+	margin: .25em;
+	}
+	#clrbtn {
+		display: flex;
+		flex-direction: row;	
+		justify-content: space-around;
+		align-items:center;
+		padding: .25em 1em .25em .25em;
+		margin: -1em 0 1em 0;
+	}
+	#addpatlogin {
+		margin-right: 5em;
+	}
+
+  /* INSERT EMPLOYEE PAGE STYLES */
+  .EmployeeBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+	background-color: #140244;
+	color: #fff;
+	width: 100%;
+	margin: 0 0 2em 0;
+	padding: 1em 0 2em 0;
+	border-radius: .25em;
+}
+	.EmployeeBox input {
+		margin: 1em .5em .5em .5em;
+		padding:  .5em;
+		border-radius: .25em;
+	}
+	.EmployeeBox form {
+		background-color: #75c9bb;
+		color: #140244;
+		border-radius: .25em;
+		padding: .5em;
+		margin-top: .75em;
+		text-align: center;
+	}
+  /* INSERT PATIENT PAGE STYLES */
+
+	.PatientBox {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;	
+		background-color: #140244;
+		color: #fff;
+		width: 100%;
+		margin: 0 0 2em 0;
+		padding: 1em 0 2em 0;
+		border-radius: .25em;
+	}
+	.PatientBox input {
+		margin: 1em .5em .5em .5em;
+		padding:  .5em;
+		border-radius: .25em;
+	}
+	.PatientBox form {
+		background-color: #75c9bb;
+		color: #140244;
+		border-radius: .25em;
+		padding: .5em;
+		margin-top: .75em;
+		text-align: center;
+	}
+  /* SEARCH PATIENT PAGE STYLES */
+
+	#PatientSearchBox {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;	
+		background-color: #140244;
+		color: #fff;
+		width: 100%;
+		margin: 0 0 2em 0em;
+		padding: 1em 0 2em 0;
+		border-radius: .25em;
+	}
+	 #PatientSearchBox input {
+		margin: 1em .5em .5em .5em;
+		padding:  .5em;
+		border-radius: .25em;
+	}
+	#Patientform {
+		background-color: #75c9bb;
+		color: #140244;
+		border-radius: .25em;
+		padding: .5em;
+		margin-top: .75em;
+		text-align: center;
+	} 
+	#PatientList {
+		width: 100%;
+	}
+	#PatientList{
+		color: #140244;
+		font-size: 1.1em;
+		padding: 1.1em;
+	}
+	.patienttable{
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	.patienttable td, th {
+		border-collapse: collapse;
+		border: .125em solid #75c9bb;
+		text-align: left;
+		padding: .5em;
+	}
+	.patienttable thead th {
+		background-color: #140244;
+		color: #75c9bb;
+		font-weight: 600;
+	}
+	.patienttable tr:hover {
+		background-color: rgba(20, 2, 68, 0.5);
+	}
+	.patienttable tr td:hover {
+		background-color: rgba(117,201,187, 0.7);
+	}
+
+
+
+
+
+
+/* FACILITY PAGE STYLES */
+
+#facility {
+	width: 50em;
+	height: 25em;
+	margin: 0 0 0 15em;
+}
+#factitle {
+	text-align: center;
+	font-size: 2em;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 700;
+	margin: 2em 0 1em 0;
+	color: #140244;
+}
+
+  /* INSERT APPOINTMENT PAGE STYLES */
+
+#apptinfo {
+	align-self: flex-start;
+	align-content: center;
+	padding: 0 0 0 7em;
+	margin-top: 2em;
+}
+#apptform2 {
+	align-self: flex-end;
+	padding-right: 5em;
+	margin-top: -4em;
+}
+#itemsavail {
+	color:#140244;
+	
+}
+
+
+.ApptBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+	background-color: #140244;
+	color: #fff;
+	width: 100%;
+	margin: 0 0 2em 0;
+	padding: 1em 0 2em 0;
+	border-radius: .25em;
+}
+.ApptBox input {
+	margin: 1em .5em .5em .5em;
+	padding:  .5em;
+	border-radius: .25em;
+}
+.ApptBox form {
+	background-color: #75c9bb;
+	color: #140244;
+	border-radius: .25em;
+	padding: .5em;
+	margin-top: .75em;
+	text-align: center;
+}
+  /* INSERT ORDER PAGE STYLES */
+
+
+.OrderBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+	background-color: #140244;
+	color: #fff;
+	width: 100%;
+	margin: 0 0 2em 0;
+	padding: 1em 0 2em 0;
+	border-radius: .25em;
+}
+.OrderBox input {
+	margin: 1em .5em .5em .5em;
+	padding:  .5em;
+	border-radius: .25em;
+}
+.OrderBox form {
+	background-color: #75c9bb;
+	color: #140244;
+	border-radius: .25em;
+	padding: .5em;
+	margin-top: .75em;
+	text-align: center;
+}
+
+  /* SEARCH APPOINTMENT PAGE STYLES */
+
+
+.Appointment-heading {
+	padding: 0 1em 1em 1em;
+	border: .125em solid #140244;
+}
+.Appointment-data {
+	padding: 0 1em 0 1em;
+	border: .0625em solid #140244;
+}
+#Appointment-data-table {
+	display: block;
+	float: right;
+	margin: 0 15em 0 0;
+}
+#appt-form {
+	display: block;
+	float: left;
+	margin: 4em 0 0 5em;
+}
+#appt-form h2 {
+	margin-left: 5em;
+}
+.form-table {
+	margin: 1.5em 0 1.5em 0;
+}
+#appt-form th{
+	padding-bottom: 1em;
+}
+#submitBtn {
+	margin-left: 5em;
+}
+.greeting {
+	font-size: 72px;
+	text-align: center;
+	color: #140244;
+	text-shadow: 2px 2px #75c9bb;
+	margin-bottom: 4rem;
+}
+#detailsout2 {
+	margin-bottom: 2rem;
+}
+#detailstable td{
+	background-color: #fff;
+}
+#patientappttable td{
+	background-color: #fff;
+}
+#detailsout th:last-of-type {
+	display: none;
+}
+#detailsout2 td:last-of-type {
+	display: none;
+}
+.itemSuccessMsg .add-item{
+	font-size: 28px;
+	color:blue;
+}
+.itemSuccessMsg .update-item{
+	font-size: 36px;
+	color:red;
+}
