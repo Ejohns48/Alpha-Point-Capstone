@@ -6,18 +6,19 @@ var bodyParser = require("body-parser");
 var app = express();
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
+require('dotenv').config();
 
-
+const { REACT_APP_DB_HOST, REACT_APP_DB_USER, REACT_APP_DB_PWD, REACT_APP_DB_NAME, PORT } = process.env;
 const jwtKey = 'my_secret_key';
 const jwtExpirySeconds = 3000;
 
 var mysql = require("mysql2");
 
 const con = mysql.createConnection({
-    host: "localhost",
-    user: "Eric",
-    password: "Aidan9489*",
-    database: "alpha_point",
+    host: REACT_APP_DB_HOST,
+    user: REACT_APP_DB_USER,
+    password: REACT_APP_DB_PWD,
+    database: REACT_APP_DB_NAME,
 });
 
 con.connect(function (err) {
@@ -25,7 +26,7 @@ con.connect(function (err) {
   console.log("Connected!!");
 });
 
-app.set("port", process.env.PORT || 3001);
+app.set("port", PORT);
 
 app.use("/", express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
@@ -180,15 +181,15 @@ app.post('/loginpatient/', function (req, res) {
   con.query(sql, function (err, data)     {
       //Checks to see if there is data in the result
       if (data.length > 0) {
-          ("User name correct: ");
+        console.log("User name correct: ");
           var patkey = data[0].patientid;
           bcrypt.compare(ppwd, data[0].patientpwd, function (err, passwordCorrect ) {
               if (err) {
                   throw err;
               } else if (!passwordCorrect) {
-                  ("Password Incorrect");
+                console.log("Password Incorrect");
               } else {
-                  ("Password Correct");
+                console.log("Password Correct");
                   const token = jwt.sign({ patkey }, jwtKey, {
                     algorithm: 'HS256',
                     expiresIn: jwtExpirySeconds
@@ -198,7 +199,7 @@ app.post('/loginpatient/', function (req, res) {
               }
           });
       } else {
-          ("Incorrect user name or password!!");
+          console.log("Incorrect user name or password!!");
       }
   });
 });
